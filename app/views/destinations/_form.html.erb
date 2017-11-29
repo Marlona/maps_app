@@ -1,0 +1,27 @@
+<%= form_with(model: destination, local: true) do |form| %>
+  <% if destination.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(destination.errors.count, "error") %> prohibited this destination from being saved:</h2>
+
+      <ul>
+      <% destination.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :City %>
+    <%= form.text_field :City, id: :destination_City %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Country %>
+    <%= form.text_field :Country, id: :destination_Country %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
