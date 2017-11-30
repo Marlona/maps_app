@@ -10,8 +10,8 @@
 
   <body>
     <%= yield %>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeihv96YCAZviFF3BDjsS8dwTdGs-0GrI">
- </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= Figaro.env.google_api_key %>">
+		</script>
+
   </body>
 </html>

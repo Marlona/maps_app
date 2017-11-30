@@ -14,8 +14,8 @@
   <tbody>
     <% @destinations.each do |destination| %>
       <tr>
-        <td><%= destination.City %></td>
-        <td><%= destination.Country %></td>
+        <td><%= destination.city %></td>
+        <td><%= destination.country %></td>
         <td><%= link_to 'Show', destination %></td>
         <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
         <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
